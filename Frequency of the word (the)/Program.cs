@@ -1,15 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Frequency_of_the_word__the_
+﻿/*
+ * C# Program to Find the Frequency of the Word ʺtheʺ in a given Sentence
+ */
+using System;
+class program
 {
-    class Program
+    public static void Main()
     {
-        static void Main(string[] args)
-        {
-        }
+        string s1;
+        Console.WriteLine("Enter the String : ");
+        s1 = Console.ReadLine();
+        Console.WriteLine(counting.CountStringOccurrences(s1, "the"));
+        Console.ReadLine();
     }
 }
+public static class counting
+{
+    public static int CountStringOccurrences(string text, string pattern)
+    {
+        int count = 0;
+        int i = 0;
+        while ((i = text.IndexOf(pattern, i)) != -1)
+        {
+            i += pattern.Length;
+            count++;
+        }
+        return count;
+    }
+}
+/*
+Enter the String :
+here's the outcome of the pollution.
+2
+
+Press any key to continue . . .
+*/
